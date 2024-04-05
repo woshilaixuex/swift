@@ -1,0 +1,45 @@
+syntax = "v1"
+
+info(
+    title: "用户实例"
+    desc: "用户实例"
+    author: "delyr1c"
+    email: "linyugang7295@gmail.com"
+    version: "v1"
+)
+
+type User {
+    Id       int64  `json:"id"`
+    Mobile   string `json:"mobile"`
+    Nickname string `json:"nickname"`
+}
+
+type (
+    VerCodeResp {
+        Base64 string `json:"b64s"`
+        Key    string `json:"key"`
+    }
+)
+type (
+    PhoneVerCodeReq {
+    }
+    PhoneVerCodeResp {
+    }
+)
+type (
+    LoginReq {
+
+    }
+    LoginResp {
+
+    }
+)
+type (
+    RegisterReq {
+
+    }
+    RegisterResp {
+    }
+)
+
+
