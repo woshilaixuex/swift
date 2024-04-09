@@ -28,18 +28,34 @@ type (
 )
 type (
     LoginReq {
-
+        Mobile   string `json:"mobile"`
+        PassWord string `json:"password"`
     }
     LoginResp {
-
+        AccessToken  string `json:"accessToken"`
+        AccessExpire int64  `json:"accessExpire"`
+        RefreshAfter int64  `json:"refreshAfter"`
     }
 )
 type (
     RegisterReq {
-
+        VerCode  string `json:"ver_code"`
+        VerKey   string `json:"ver_key"`
+        Mobile   string `json:"mobile"`
+        PassWord string `json:"password"`
     }
     RegisterResp {
+        AccessToken  string `json:"accessToken"`
+        AccessExpire int64  `json:"accessExpire"`
+        RefreshAfter int64  `json:"refreshAfter"`
     }
 )
 
-
+type (
+    UserInformReq {
+    }
+    UserInformResp {
+        Mobile   string `json:"mobile"`
+        Nickname string `json:"nickname"`
+    }
+)
